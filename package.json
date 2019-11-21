@@ -1,0 +1,62 @@
+{
+  "name": "egg-logfile",
+  "version": "1.0.0",
+  "description": "record single file log for eggjs",
+  "eggPlugin": {
+    "name": "logfile"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "logfile",
+    "log file",
+    "log-file",
+    "file-log"
+  ],
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.25.0",
+    "egg-bin": "^4.14.0",
+    "egg-ci": "^1.13.1",
+    "egg-mock": "^3.24.2",
+    "eslint": "^6.6.0",
+    "eslint-config-egg": "^7.5.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "app.js",
+    "agent.js",
+    "config",
+    "lib",
+    "app"
+  ],
+  "ci": {
+    "version": "8, 10, 12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lengku496/egg-logfile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lengku496/egg-logfile/issues"
+  },
+  "homepage": "https://github.com/lengku496/egg-logfile#readme",
+  "author": "joss",
+  "license": "MIT"
+}
